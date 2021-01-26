@@ -40,22 +40,10 @@ echo "Dni: $this->dni <br>";
 echo "Dni: $this->age <br><br>";
 
 }
-<<<<<<< HEAD
 
 }//end class Student
 
 $alumne1=new Student();//creating object using a default constructor
-=======
-  function __construct($name,$dni,$surn,$age){
-      $this->name=$name;
-      $this->dni=$dni;
-      $this->surn=$surn;
-      $this->age=$age;
-  }
-}//end class Student
-
-$alumne1=new Student('Tomeu','580','de ca es conco','26');//creating object using a default constructor
->>>>>>> Develop-OOD
 $alumne1->setName('Imena');
 $alumne1->setDni('23344556D');
 $alumne1->setSurn('Riera');
