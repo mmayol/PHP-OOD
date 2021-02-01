@@ -5,7 +5,7 @@
 <body>
 
 <?php
-class Money
+class Currency_Converter
 {
 var $euro;
 var $dollar;
@@ -48,7 +48,7 @@ echo "Yen:", $this->yen ,"<br><br>";
   }
 }//end class Student
 
-$op1=new Money("10","12.1596","1,258.79","8.86071");//creating object using a default constructor
+$op1=new Currency_Converter("10","12.1596","1,258.79","8.86071");//creating object using a default constructor
 $op1->print();
 
 ?>
