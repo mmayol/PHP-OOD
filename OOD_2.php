@@ -23,12 +23,12 @@ class Fruit {
     return $this->color;
   }
   function __construct($name,$color){
-      $this->name=$name;
-      $this->color=$color;
+      $this->name = $name;
+      $this->color = $color;
   }
 }
 
-$apple = new Fruit();
+$apple = new Fruit('Apple','Red');
 $apple->set_name('Apple');
 $apple->set_color('Red');
 echo "Name: " . $apple->get_name();
