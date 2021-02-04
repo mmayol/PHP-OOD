@@ -61,7 +61,7 @@
   }
 
 function converEuros_To_Pownds(){
-    $this->pounds=$this->euros*$this->exchange;
+    $this->pounds=$this->euros/$this->exchange;
     return $this->pounds;
 }
 }
