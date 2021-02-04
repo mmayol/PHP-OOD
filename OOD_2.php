@@ -1,66 +1,39 @@
 <HTML>
 <head>
-<title>OOD_1: Student class: setters and getters</title>
+<title>OOD_2: Fruit class: constructor for initialising properties</title>
 </head>
 <body>
-
 <?php
-class Student
-{
-var $name;
-var $surn;
-var $dni;
-var $age;
+class Fruit {
+  // Properties
+  var $name;
+  var $color;
 
-public function setName($name)
-{
-$this->name=$name;
-}
-
-public function setDni($dni)
-{
-$this->dni=$dni;
-}
-
-public function setSurn($surn)
-{
-$this->surn=$surn;
-}
-
-public function setAge($age)
-{
-$this->age=$age;
-}
-
-public function print()
-{
-echo "Name: $this->name <br>";
-echo "Name: $this->surn <br>";
-echo "Dni: $this->dni <br>";
-echo "Dni: $this->age <br><br>";
-
-}
-  function __construct($name,$dni,$surn,$age){
-      $this->name=$name;
-      $this->dni=$dni;
-      $this->surn=$surn;
-      $this->age=$age;
+  // Methods
+  function set_name($name) {//snake vs camel case notation
+    $this->name = $name;
   }
-}//end class Student
+  function get_name() {
+    return $this->name;
+  }
+  function set_color($color) {
+    $this->color = $color;
+  }
+  function get_color() {
+    return $this->color;
+  }
+  function __construct($name,$color){
+      $this->name=$name;
+      $this->color=$color;
+  }
+}
 
-$alumne1=new Student('Tomeu','580','de ca es conco','26');//creating object using a default constructor
-$alumne1->setName('Imena');
-$alumne1->setDni('23344556D');
-$alumne1->setSurn('Riera');
-$alumne1->setAge('21');
-$alumne1->print();
-$alumne1->setName('Tomeu');
-$alumne1->setDni('580');
-$alumne1->setSurn('de ca es conco');
-$alumne1->setAge('26');
-$alumne1->print();
-
-
+$apple = new Fruit();
+$apple->set_name('Apple');
+$apple->set_color('Red');
+echo "Name: " . $apple->get_name();
+echo "<br>";
+echo "Color: " . $apple->get_color();
 ?>
 </body>
 </HTML>
