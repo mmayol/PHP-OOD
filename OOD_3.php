@@ -19,7 +19,7 @@ public function setEuros($Euros)
 $this->Euros=$Euros;
 }
 
-public function setExchange_Rate($ExchangeRate)
+public function setExchange_Rate($Exchange_Rate)
 {
 $this->Exchange_Rate=$Exchange_Rate;
 }
@@ -44,7 +44,11 @@ public function getPounds()
 {
 return $this->Pounds;
 }
-
+public function __construct($Euros,$Exchange_Rate,$Pounds){
+      $this->Euros = $Euros;
+      $this->Exchange_Rate = $Exchange_Rate;
+      $this->Pounds = $Pounds;      
+  }
 public function print()
 {
 echo "Euros: $this->Euros <br>";
@@ -54,10 +58,10 @@ echo "Pounds: $this->Pounds <br>";
 
 }//end class Student
 
-$alumne1=new Currency_Converter();//creating object using a default constructor
-$alumne1->setEuros('');
-$alumne1->setExchange_Rate('0.89');
-$alumne1->setPounds('');
+$alumne1=new Currency_Converter(20,0.89,17.8);//creating object using a default constructor
+$alumne1->setEuros(20);
+$alumne1->setExchange_Rate(0.89);
+$alumne1->setPounds(17.8);
 $alumne1->print();
 
 ?>
